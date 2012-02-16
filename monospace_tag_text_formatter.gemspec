@@ -14,4 +14,6 @@ Gem::Specification.new do |s|
   s.require_path  = "lib"
 
   s.add_runtime_dependency "monospace_text_formatter", "0.0.1"
+
+  s.add_development_dependency "rspec", "~> 2.0"
 end
