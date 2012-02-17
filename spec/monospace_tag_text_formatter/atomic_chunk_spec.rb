@@ -110,6 +110,42 @@ describe MonospaceTagTextFormatter::AtomicChunk do
     its(:to_s          ) { should == "</>" }
   end
 
+  context 'with "&lt;" content' do
+    subject { described_class.new("&lt;") }
+    its(:display_string) { should == "&lt;" }
+    its(:display_length) { should == 1 }
+    its(:newline?      ) { should be_false }
+    its(:blank?        ) { should be_false }
+    its(:opening_tag?  ) { should be_false }
+    its(:closing_tag?  ) { should be_false }
+    its(:tag_name      ) { should be_nil }
+    its(:to_s          ) { should == "&lt;" }
+  end
+
+  context 'with "&gt;" content' do
+    subject { described_class.new("&gt;") }
+    its(:display_string) { should == "&gt;" }
+    its(:display_length) { should == 1 }
+    its(:newline?      ) { should be_false }
+    its(:blank?        ) { should be_false }
+    its(:opening_tag?  ) { should be_false }
+    its(:closing_tag?  ) { should be_false }
+    its(:tag_name      ) { should be_nil }
+    its(:to_s          ) { should == "&gt;" }
+  end
+
+  context 'with "&abcd;" content' do
+    subject { described_class.new("&abcd;") }
+    its(:display_string) { should == "&abcd;" }
+    its(:display_length) { should == 6 }
+    its(:newline?      ) { should be_false }
+    its(:blank?        ) { should be_false }
+    its(:opening_tag?  ) { should be_false }
+    its(:closing_tag?  ) { should be_false }
+    its(:tag_name      ) { should be_nil }
+    its(:to_s          ) { should == "&abcd;" }
+  end
+
   describe ".closing_tag" do
 
     context "MonospaceTagTextFormatter::AtomicChunk.closing_tag(:tag_name)" do

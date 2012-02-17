@@ -5,6 +5,10 @@ module MonospaceTagTextFormatter
       new("</#{name}>")
     end
 
+    def display_length
+      @display_length ||= %W(&lt; &gt;).include?(display_string) ? 1 : super
+    end
+
     def display_string
       @display_string ||= @string.gsub(/^<\/?[^\/>][^>]*>$/, '')
     end
