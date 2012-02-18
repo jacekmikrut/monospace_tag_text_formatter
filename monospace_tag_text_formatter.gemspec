@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files         = Dir["lib/**/*", "README*", "LICENSE*", "Changelog*"]
   s.require_path  = "lib"
 
-  s.add_runtime_dependency "monospace_text_formatter", "0.0.1"
+  s.add_runtime_dependency "monospace_text_formatter", "0.0.2"
 
   s.add_development_dependency "rspec", "~> 2.0"
 end
