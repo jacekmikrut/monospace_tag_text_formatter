@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.author        = "Jacek Mikrut"
   s.email         = "jacekmikrut.software@gmail.com"
   s.homepage      = "http://github.com/jacekmikrut/monospace_tag_text_formatter"
-  s.summary       = "Extension for monospace_text_formatter Gem that handles HTML-like tags."
-  s.description   = "Extension for monospace_text_formatter Gem. Treats HTML-like tags as zero-length and ensures they are properly closed during text truncation/splitting and reopened after line wrapping."
+  s.summary       = "Extension to monospace_text_formatter Gem that handles HTML-like tags."
+  s.description   = "Extension to monospace_text_formatter Gem. Treats HTML-like tags as zero-length and ensures they are properly closed during text truncation/splitting and reopened after line wrapping."
 
   s.files         = Dir["lib/**/*", "README*", "LICENSE*", "Changelog*"]
   s.require_path  = "lib"
